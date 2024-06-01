@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tulips</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main-wrapper" class="fancy-scrollbar">
+        <div id="main">
+            <div id="content">
+                <div class="mycontainer" style="padding-left: 30%; padding-right: 30%; padding-top: 1%;">
+                    <div id="search-container" style="margin-top: 5%; margin-left: 3%">
+                        <div id="search-input-container">
+                            <img src="https://assets.codepen.io/1468070/Google+G+Icon.png" alt="" />
+                            <input type="text" placeholder="Search anything" id="search" />
+                        </div>
+
+                        <button id="image-button" onclick="googleSearch();" type="button">
+                            <i class="fa-regular fa-search"></i>
+                        </button>
+
+                        <button id="mic-button" type="button">
+                            <i class="fa-regular fa-microphone"></i>
+                        </button>
+
+
+
+                    </div>
+                    <div id="header-container">
+                        <div class='parent'>
+                            <iframe src="https://codervaibhav24.github.io/Flower/" frameborder="0" style="height: 100%; width : 100%;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function googleSearch() {
+            var text = document.getElementById("search").value;
+            var cleanQuery = text.replace(" ", "+", text);
+            var url = 'http://www.google.com/search?q=' + cleanQuery;
+
+            window.location.href = url;
+        }
+    </script>
+    <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
